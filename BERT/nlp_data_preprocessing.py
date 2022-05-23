@@ -20,11 +20,10 @@ class InitialDataLoader():
         self.test_csv_dir = test_csv_dir
 
     def data_preprocessing(self):
-        print('Initial Data Loading and Preprocessing...')
+        print('============= Initial Data Loading and Preprocessing =============')
         train_df = pd.read_csv(self.train_csv_dir)
         test_df = pd.read_csv(self.test_csv_dir)
-        print('There are', len(train_df.index), 'training samples')
-        print('There are', len(test_df.index), 'testing samples')
+        print('There are', len(train_df.index), 'training samples and', len(test_df.index), 'testing samples.')
 
         train_text_samples = train_df.target.value_counts()
         sns.set(rc={'figure.figsize':(5,5)})
@@ -33,8 +32,8 @@ class InitialDataLoader():
         plt.gca().set_xlabel('Classes')
         plt.gca().set_ylabel('# of Samples')
         plt.savefig("./plots/class-distribution.png")
-        print('There are', len(train_df[train_df['target'] == 0]['text']), 'samples are labeled as non-disaster')
-        print('There are', len(train_df[train_df['target'] == 1]['text']), 'samples are labeled as disaster')
+        print('There are', len(train_df[train_df['target'] == 0]['text']), 'non-disaster tweets and', len(train_df[train_df['target'] == 1]['text']), \
+        'disaster tweets.')
         #print('\nWe observe slight class imbalance but not critical')
 
         train_df['location'] = train_df['location'].fillna('None')
