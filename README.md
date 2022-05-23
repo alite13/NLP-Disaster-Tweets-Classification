@@ -1,5 +1,5 @@
 # NLP-Disaster-Tweets-Classification
-This is the repository for the source code of the disaster tweets classification using NLP project found on https://www.kaggle.com/competitions/nlp-getting-started/  
+This is a repository for the source code of the disaster tweets classification using NLP project found on https://www.kaggle.com/competitions/nlp-getting-started/  
 
 This project is implemented using Python 3.8.5, CUDA 11.6.  
 There are two experiments have been done to classify disaster tweets.  
