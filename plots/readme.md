@@ -1,1 +1,1 @@
-Basic plots generated during EDA.
+Generated plots.
