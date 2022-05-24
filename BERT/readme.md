@@ -11,4 +11,4 @@ conda install -c conda-forge seaborn
 conda install -c conda-forge pandas  
 conda install -c conda-forge wordcloud  
 conda install -c conda-forge transformers  
-
+conda install -c conda-forge nltk
