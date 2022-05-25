@@ -26,14 +26,14 @@ class InitialDataLoader():
         print('There are', len(train_df.index), 'training samples and', len(test_df.index), 'testing samples.')
 
         train_text_samples = train_df.target.value_counts()
-        sns.set(rc={'figure.figsize':(5,5)})
+        sns.set(rc={'figure.figsize':(6,6)})
 
-        sns.barplot(x = train_text_samples.index, y = train_text_samples)
+        sns.barplot(x = train_text_samples.index, y = train_text_samples).set(title = 'Distribution of Training Samples')
         plt.gca().set_xlabel('Classes')
         plt.gca().set_ylabel('# of Samples')
-        plt.savefig("./plots/class-distribution.png")
-        print('There are', len(train_df[train_df['target'] == 0]['text']), 'non-disaster tweets and', len(train_df[train_df['target'] == 1]['text']), \
-        'disaster tweets.')
+        plt.savefig("./plots/samples-distribution.png")
+        #print('There are', len(train_df[train_df['target'] == 0]['text']), 'non-disaster tweets and', len(train_df[train_df['target'] == 1]['text']), \
+        #'disaster tweets in the training dataset.')
         #print('\nWe observe slight class imbalance but not critical')
 
         train_df['location'] = train_df['location'].fillna('None')
@@ -64,7 +64,7 @@ class InitialDataLoader():
         punct_freq = dict(Counter(punct_list))
         punct_freq = {i: j for i, j in sorted(punct_freq.items(), key=lambda item: item[1], reverse=True)}
         del punct_freq[' ']
-        sns.set(rc={'figure.figsize':(8,6)})
+        sns.set(rc={'figure.figsize':(6,7)})
         punct_keys = list(punct_freq.keys())
         punct_vals = list(punct_freq.values())
         sns.barplot(x = punct_keys, y = punct_vals)
@@ -90,11 +90,11 @@ class InitialDataLoader():
         #test_df.head()
 
         word_cloud_before1 = '  '.join(list(train_df[train_df['target'] == 1]['text']))
-        word_cloud_before1 = WordCloud(background_color='white', width = 500, height = 400).generate(word_cloud_before1)
+        word_cloud_before1 = WordCloud(background_color='white', width = 400, height = 400).generate(word_cloud_before1)
         word_cloud_after1 = '  '.join(list(train_df[train_df['target'] == 1]['new_text']))
-        word_cloud_after1 = WordCloud(background_color='white', width = 500, height = 400).generate(word_cloud_after1)
+        word_cloud_after1 = WordCloud(background_color='white', width = 400, height = 400).generate(word_cloud_after1)
 
-        fig, ax = plt.subplots(1, 2, figsize=(16, 14))
+        fig, ax = plt.subplots(1, 2, figsize=(16, 15))
         ax[0].imshow(word_cloud_before1)
         ax[1].imshow(word_cloud_after1)
 
@@ -104,11 +104,11 @@ class InitialDataLoader():
         #plt.show()
 
         word_cloud_before0 = '  '.join(list(train_df[train_df['target'] == 0]['text']))
-        word_cloud_before0 = WordCloud(background_color='white', width = 400, height = 300).generate(word_cloud_before0)
+        word_cloud_before0 = WordCloud(background_color='white', width = 400, height = 400).generate(word_cloud_before0)
         word_cloud_after0 = '  '.join(list(train_df[train_df['target'] == 0]['new_text']))
-        word_cloud_after0 = WordCloud(background_color='white', width = 400, height = 300).generate(word_cloud_after0)
+        word_cloud_after0 = WordCloud(background_color='white', width = 400, height = 400).generate(word_cloud_after0)
 
-        fig, ax = plt.subplots(1, 2, figsize=(16, 14))
+        fig, ax = plt.subplots(1, 2, figsize=(16, 15))
         ax[0].imshow(word_cloud_before0)
         ax[1].imshow(word_cloud_after0)
 
