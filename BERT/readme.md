@@ -1,5 +1,6 @@
 ## This is the code of the BERT model implementation.  
 Dependencies (Anaconda):  
+
 Pytorch 1.11.0, Torchvision 0.12.0, Torchaudio 0.11.0 (conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch)  
 Spacy 3.3.0 (conda install -c conda-forge spacy)    
 Scikit-learn 1.1.0 (conda install -c conda-forge scikit-learn)  
