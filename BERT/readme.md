@@ -7,7 +7,7 @@ Spacy 3.3.0 (`conda install -c conda-forge spacy`)
 
 Scikit-learn 1.1.0 (`conda install -c conda-forge scikit-learn`)  
 
-Scipy 1.8.0 (`conda install -c conda-forge scipy`)  
+Scipy 1.8.1 (`conda install -c conda-forge scipy`)  
 
 Numpy 1.22.3 (`conda install -c conda-forge numpy`)  
 
