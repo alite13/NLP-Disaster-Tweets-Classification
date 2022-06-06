@@ -17,3 +17,5 @@ This project is implemented using Python 3.8.5, CUDA 11.6.
 
 This project on Kaggle: https://www.kaggle.com/competitions/nlp-getting-started/overview  
 BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding: https://arxiv.org/abs/1810.04805
+RoBERTa: A Robustly Optimized BERT Pretraining Approach: https://arxiv.org/pdf/1907.11692.pdf
+Unsupervised Cross-lingual Representation Learning at Scale: https://arxiv.org/pdf/1911.02116.pdf
