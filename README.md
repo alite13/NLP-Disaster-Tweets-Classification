@@ -3,6 +3,15 @@ This is the repository for the source code of the disaster tweets classification
 
 This project is implemented using Python 3.8.5, CUDA 11.6.
 
+## Results:  
+| Model | Loss Function | Optimizer | Epochs | Accuracy |
+| --- | --- | --- | --- | --- |
+| BERT | nn.CrossEntropy() | AdamW | 4 | 83.09% |
+| RoBERTa | nn.CrossEntropy() | AdamW | 4 | 81.79% |
+| XLMRoBERTa | nn.CrossEntropy() | AdamW | 4 | 79.89% |
+| BERT + BERT (Ensemble) | nn.CrossEntropy() | AdamW | 4 | 79.04% |
+| RoBERTa + RoBERTa (Ensemble) | nn.CrossEntropy() | AdamW | 4 | 82.37% |
+| XLMRoBERTa + XLMRoBERTa (Ensemble) | nn.CrossEntropy() | AdamW | 4 | 81.2% |
 
 ## References
 
