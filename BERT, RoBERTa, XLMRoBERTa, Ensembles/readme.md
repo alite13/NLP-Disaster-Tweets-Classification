@@ -1,4 +1,4 @@
-## This is the code of the BERT model implementation.  
+## This is the code for the implementation of single BERT, RoBERTa, XLMRoBERTa models and their ensembles.
 Dependencies (Anaconda):  
 
 Pytorch 1.11.0, Torchvision 0.12.0, Torchaudio 0.11.0 (`conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch`)  
