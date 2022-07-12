@@ -1,4 +1,4 @@
-# NLP Disaster Tweets Classification
+# Classification of Disaster Tweets (Natural Language Processing)
 This is the repository for the source code of the disaster tweets classification using NLP project found on https://www.kaggle.com/competitions/nlp-getting-started/  
 My Jupyter Notebook on Kaggle is available here https://www.kaggle.com/code/alinaageichik/eda-bert-roberta-xlmroberta-and-ensembles
 
